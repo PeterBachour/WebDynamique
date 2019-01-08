@@ -1,0 +1,113 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Base.master.cs" Inherits="Base" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="demo.css">
+  <link rel="stylesheet" href="footer-distributed-with-address-and-phones.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+  <asp:ContentPlaceHolder id="head" runat="server">
+  </asp:ContentPlaceHolder>
+  <link rel="stylesheet" type="text/css" href="base.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="../HomePage/HomePage.aspx"><img src="../Images/logo.png" width="70" height="35"/></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li id="tab-home" class="nav-item">
+          <a class="nav-link" href="../HomePage/HomePage.aspx">Home</a>
+        </li>
+        <li id="tab-eyeglasses" class="nav-item">
+          <a class="nav-link" href="../Eyeglasses/Eyeglasses.aspx">Eyeglasses</a>
+        </li>
+        <li id="tab-sunglasses" class="nav-item">
+          <a class="nav-link" href="../Sunglasses/Sunglasses.aspx">Sunglasses</a>
+        </li>
+        <li id="tab-lenses" class="nav-item">
+          <a class="nav-link" href="../Lenses/Lenses.aspx">Lenses</a>
+        </li>
+      </ul>
+        <asp:LoginView ID="Login1" runat="server" ViewStateMode="Disabled">
+            <AnonymousTemplate>
+               <ul class="navbar-nav mr-auto">
+                    <li id="tab-login" class="nav-item">
+                      <a class="nav-link" href="../Login/Login.aspx">Login</a>
+                    </li>
+                     <li id="tab-register" class="nav-item">
+                      <a class="nav-link" href="../Register/Register.aspx">Register</a>
+                    </li>
+              </ul>
+                </AnonymousTemplate>
+       </asp:LoginView>
+    </div>
+  </nav>
+  <asp:ContentPlaceHolder id="body" runat="server">
+  </asp:ContentPlaceHolder>
+  <footer class="footer-distributed">
+    <div class="footer-left">
+      <h3><img src="../Images/logo.png" width="200" height="100"/></h3>
+      <p class="footer-links">
+        <a href="../HomePage/HomePage.aspx">Home</a>
+        ·
+        <a href="../Eyeglasses/Eyeglasses.aspx">Eyeglasses</a>
+        ·
+        <a href="../Sunglasses/Sunglasses.aspx">Sunglasses</a>
+        ·
+        <a href="../Lenses/Lenses.aspx">Lenses</a>
+      </p>
+
+      <p class="footer-company-name">iGlasses &copy; 2019</p>
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Hadath, facing Fransabank</span> Beirut, Lebanon</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+961 71 289 889</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:peter_bachour@icloud.com">peter_bachour@icloud.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>About the company</span>
+        Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus
+        vehicula
+        sit amet.
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="https://www.facebook.com/i.glasses1973/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/iglasses_eyewear/?hl=en"><i class="fa fa-instagram"></i></a>
+      </div>
+
+    </div>
+
+  </footer>
+</body>
+
+</html>
