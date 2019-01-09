@@ -3,8 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="body" Runat="Server">
-      <form id="form1" runat="server">
-           
+      <form id="form1" runat="server">         
           <asp:Login ID="Login1" runat="server">
               <LayoutTemplate>
                   <table cellpadding="1" cellspacing="0" style="border-collapse:collapse;">

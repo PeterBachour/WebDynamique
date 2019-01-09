@@ -11,4 +11,12 @@ public partial class Product : System.Web.UI.Page
     {
 
     }
+    protected void AddToCart_Click(object sender, EventArgs e)
+    {
+        Button btn = (Button)sender;
+        ShoppingCart shoppingCart = ShoppingCart.Instance();
+        shoppingCart.ProductIds.Add(int.Parse( btn.CommandArgument.ToString()));
+        Response.Redirect("Eyeglasses/Eyeglasses.aspx");
+    }
+
 }

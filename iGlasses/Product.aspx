@@ -26,8 +26,13 @@ WHERE (p.[Id] = @Id)">
                         </h4>
                         <asp:Label ID="QuantityLabel" runat="server" Text='<%# Bind("Quantity") %>' />
                         <asp:Label ID="Brand1Label" runat="server" Text='<%# Bind("Brand1") %>' />
+                        <input type="button" value="Check my Cart" onclick="window.location.href='<%#String.Format("Cart.aspx?id={0}", DataBinder.Eval(Container.DataItem,"Id"))%>'" />
+                        <asp:Button ID="AddToCart" runat="server" Text="Add to my Cart" CommandArgument='<%#Eval("Id")%>' 
+                            OnClick="AddToCart_Click" />
+
                     </center>
                 </div>
+                        
             </ItemTemplate>
         </asp:FormView>
     </form>

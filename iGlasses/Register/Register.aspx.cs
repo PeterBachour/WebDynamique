@@ -42,7 +42,7 @@ public partial class Login_Login : System.Web.UI.Page
         sqlCon.Open();
         com.ExecuteNonQuery();
         sqlCon.Close();
-        Response.Redirect("../HomePage/Homepage.aspx");
+        Response.Redirect("../Login/Login.aspx");
     }
 
     public static string Encrypt(string strData)
