@@ -26,14 +26,9 @@
                         onclick="myFunction('<%#Eval("Name")%>')"/>
                     <script>
 function myFunction(name) {
-    //alert("You are going to buy these products");
     alert("You are going to buy these products: " + name);
-   // alert(name);
-}
+s}
 </script>
 
-            <%--onclick="window.location.href='<%#String.Format("Cart.aspx?id={0}", DataBinder.Eval(Container.DataItem,"Id"))%>'"--%> <%--/>--%>
     </form>
 </asp:Content>
-
-

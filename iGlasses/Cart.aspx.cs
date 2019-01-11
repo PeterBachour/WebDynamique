@@ -13,8 +13,8 @@ public partial class Cart : System.Web.UI.Page
     ShoppingCart shoppingCart = ShoppingCart.Instance();// ShoppingCart();
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-       
+
+
         if (!this.IsPostBack)
         {
             this.BindGrid();
@@ -25,7 +25,7 @@ public partial class Cart : System.Web.UI.Page
     {
         string constr = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         string query = "SELECT * FROM Product where";
-        query += " id in ( " + shoppingCart.ListProducts() +")";// prod);
+        query += " id in ( " + shoppingCart.ListProducts() + ")";// prod);
         using (SqlConnection con1 = new SqlConnection(constr))
         {
             using (SqlCommand cmd1 = new SqlCommand(query))
