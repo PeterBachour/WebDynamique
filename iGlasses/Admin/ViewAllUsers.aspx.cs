@@ -90,4 +90,9 @@ public partial class Admin_ViewAllUsers : System.Web.UI.Page
         GridView1.DataBind();
         clearForm();
     }
+
+    protected void Back_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Choice.aspx");
+    }
 }

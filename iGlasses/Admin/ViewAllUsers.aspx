@@ -18,6 +18,8 @@
 &nbsp;<asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Revoke Admin Role" />
         <br />
         <br />
+        <asp:Button ID="Back" runat="server" OnClick="Back_Click" Text="Back" />
+        <br />
        
       </form>
 </body>

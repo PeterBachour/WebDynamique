@@ -21,4 +21,8 @@ public partial class Admin_Chooice : System.Web.UI.Page
     {
         Response.Redirect("ViewAllProducts.aspx");   
     }
+    protected void Button3_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("ViewAllBrands.aspx");
+    }
 }
