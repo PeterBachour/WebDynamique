@@ -9,7 +9,6 @@
                     <div>
                 <asp:Image float="left" Width="200" Height="200" draggable="false" ID="ImageLabel" runat="server" ImageUrl='<%# Bind("Image") %>' />
                 <div >
-                   
                         <h2>
                             <asp:Label  ID="NameLabel" runat="server" Text='<%# Bind("Name") %>' />
                         </h2>

@@ -36,13 +36,26 @@ public partial class Login_Login : System.Web.UI.Page
     }
     protected void SignUp_Click(object sender, EventArgs e)
     {
-        string insertSql = "Insert into Users (UserName, Email, PasswordHash) values ('" + Username1 +
-            "', '" + Email1 + "', '" + Encrypt(pwd) + "')";
-        SqlCommand com = new SqlCommand(insertSql, sqlCon);
-        sqlCon.Open();
-        com.ExecuteNonQuery();
-        sqlCon.Close();
-        Response.Redirect("../Login/Login.aspx");
+        try
+        {
+            int res = string.Compare(pwd, pwdcheck);
+            if (res == 0)
+            {
+                string insertSql = "Insert into Users (UserName, Email, PasswordHash) values ('" + Username1 +
+                    "', '" + Email1 + "', '" + Encrypt(pwd) + "')";
+                SqlCommand com = new SqlCommand(insertSql, sqlCon);
+                sqlCon.Open();
+                com.ExecuteNonQuery();
+                sqlCon.Close();
+                Response.Redirect("../Login/Login.aspx");
+            }
+            else
+                Response.Write("passwords do not match");
+        }
+        catch
+        {
+            Response.Write("username already exists");
+        }
     }
 
     public static string Encrypt(string strData)

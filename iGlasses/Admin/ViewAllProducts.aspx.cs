@@ -22,8 +22,7 @@ public partial class Admin_ViewAllProducts : System.Web.UI.Page
     {
         Bind();
     }
-   
-
+  
     public void Bind()
     {
         DataSet ds = new DataSet();
@@ -69,7 +68,7 @@ public partial class Admin_ViewAllProducts : System.Web.UI.Page
         if (btnAdd.Text == "Edit")
         {
             dt.Rows[GridView1.SelectedIndex]["Name"] = Nametxt.Text;
-            dt.Rows[GridView1.SelectedIndex]["Brand"] = BrandDDL.SelectedItem.Text;// .DataTextField.Text;
+            dt.Rows[GridView1.SelectedIndex]["Brand"] = BrandDDL.SelectedItem.Text;
             dt.Rows[GridView1.SelectedIndex]["Type"] = TypeDDL.SelectedItem.Text;
             dt.Rows[GridView1.SelectedIndex]["Price"] = Pricetxt.Text;
             dt.Rows[GridView1.SelectedIndex]["Quantity"] = Quantitytxt.Text;

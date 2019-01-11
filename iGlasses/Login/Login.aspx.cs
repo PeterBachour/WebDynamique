@@ -46,8 +46,7 @@ public partial class Login_Login : System.Web.UI.Page
         }
         else
         {
-            Response.Redirect("../Eyeglasses/Eyeglasses.aspx");
-            //((Literal)Login1.FindControl("FailureText")).Text = "Wrong UserName or Password.";
+            Response.Redirect("../Register/Register.aspx");
             ((Literal)Login1.FindControl("FailureText")).EnableViewState=true;
 
         }
