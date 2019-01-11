@@ -24,14 +24,25 @@ public partial class Login_Login : System.Web.UI.Page
     protected void Login_Click(object sender, EventArgs e)
     {
         string check = "select count(*) from Users where UserName = '" + Username1 + "' and PasswordHash = '" + Encrypt(pwd) + "'";
+        string roles = "select roleid from Users where UserName = '" + Username1 + "' and PasswordHash = '" + Encrypt(pwd) + "'";
         SqlCommand com = new SqlCommand(check, sqlCon);
+        SqlCommand comm = new SqlCommand(roles, sqlCon);
         sqlCon.Open();
+        string role = comm.ExecuteScalar().ToString();
         int temp = Convert.ToInt32(com.ExecuteScalar().ToString());
         sqlCon.Close();
         if (temp == 1)
         {
+            int result = string.Compare(role, "admin");
+            if (result == 0)
+            {
+                Response.Redirect("../Admin/Choice.aspx");
+            }
+            else
+            { 
             Session["HomePage"] = Username1;
             Response.Redirect("../HomePage/HomePage.aspx");
+            }
         }
         else
         {

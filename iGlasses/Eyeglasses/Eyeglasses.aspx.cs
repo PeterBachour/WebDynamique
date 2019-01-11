@@ -18,8 +18,8 @@ public partial class Eyeglasses : System.Web.UI.Page
         {
             this.BindGrid();
         }
-        low = ((Label)FormView1.FindControl("lower_tb")).Text;
-        up = ((Label)FormView1.FindControl("upper_tb")).Text;
+        low = ((TextBox)FormView1.FindControl("low")).Text;
+        up = ((TextBox)FormView1.FindControl("up")).Text;
     }
 
     private void BindGrid()

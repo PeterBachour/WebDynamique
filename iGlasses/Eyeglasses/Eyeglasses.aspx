@@ -28,7 +28,9 @@
                         <ul>
                             <asp:FormView ID="FormView1" runat="server">
                                 <ItemTemplate>
-                                    <span class="multi-range">
+                                    <asp:TextBox ID="low" runat="server" Text='<%#Bind("min")%>'></asp:TextBox>
+                                    <asp:TextBox ID="up" runat="server" Text='<%#Bind("max")%>'></asp:TextBox>
+                                    <%--<span class="multi-range">
                                         <input id="lower" type="range" min="<%#DataBinder.Eval(Container.DataItem,"min")%>"
                                         max="<%#DataBinder.Eval(Container.DataItem," max")%>"
                                         value="<%#DataBinder.Eval(Container.DataItem,"min")%>">
@@ -40,7 +42,7 @@
                                     <br />
                                     from: $<asp:Label  ClientIDMode="Static" ID="lower_tb" runat="server" Text='<%#Bind("min")%>'></asp:Label>
                                     <br />
-                                    to: $<asp:Label  ClientIDMode="Static" ID="upper_tb" runat="server" Text='<%#Bind("max")%>'></asp:Label>
+                                    to: $<asp:Label  ClientIDMode="Static" ID="upper_tb" runat="server" Text='<%#Bind("max")%>'></asp:Label>--%>
                                 </ItemTemplate>
                             </asp:FormView>
                         </ul>
